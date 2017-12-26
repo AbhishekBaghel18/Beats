@@ -1,0 +1,43 @@
+<div class="main">
+      <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Beats, a new entertainment hub</h1>
+            <p class="lead text-muted"> Rock the floor with thousands of tracks and albums of bollywood and hollywood.</p>
+          </div>
+      </section>
+</div>
+<div class="album text-muted">
+    <div class="container">
+      <h3 class="text-center display-4">Chart's Top numbers </h3>
+      <div class="row">
+          <div class="col-md-6">
+              <h4>Tracks</h4>
+              <hr>
+              <div class="row">
+                <div class="col-md-6" ng-repeat="top in dt3">
+                  <h6>{{top.name}} </h6>
+                  <a ng-href="{{top.url}}"><img ng-src="{{ top.image[2]['#text']}}" alt="{{ top.image[2]['#text']}}"> </a> 
+                  <p class="card-text">Artist Name: {{top.artist.name}} <br>
+                   Playcount: {{top.playcount}}<br>
+                   Listeners: {{top.listeners}} <br><br>
+                </p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <h4>Artists</h4>
+              <hr>
+              <div class="row">
+                <div class="col-md-6" ng-repeat="top in dt4">
+                   <h6>{{top.name}} </h6>
+                   <a ng-href="/Beats/#/artistinfo/{{top.name}}"><img ng-src="{{ top.image[2]['#text']}}" alt="{{ top.image[2]['#text']}}"> </a> 
+                   <p class="card-text">Artist Name: {{top.name}} <br>
+                    Playcount: {{top.playcount}}<br>
+                    Listeners: {{top.listeners}} <br><br>
+                    </p>
+                 </div>
+              </div>     
+          </div>
+        </div>
+  </div>
+</div>

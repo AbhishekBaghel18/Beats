@@ -1,0 +1,17 @@
+<div class="album text-muted">
+    <div class="container">
+     <h3> Top Artists </h3>
+     <hr>
+     <div class="row">
+     	<div class="col-md-3" ng-repeat="top in dt2">
+          <h6>{{top.name}} </h6>
+           <a ng-href="/Beats/#/artistinfo/{{top.name}}"><img ng-src="{{ top.image[2]['#text']}}" alt="{{ top.image[2]['#text']}}"> </a> 
+           <p class="card-text">Artist Name: {{top.name}} <br>
+            Listeners: {{top.listeners}} <br><br>
+            </p>
+         </div>
+       
+       </div>
+            
+     </div>
+ </div>

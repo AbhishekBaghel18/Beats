@@ -1,0 +1,56 @@
+<div class="container">
+	<h2 class="text-center display-4">Search results for : {{find}}</h2>
+	<div class="row">
+		<div class="col-md-4">
+	   <div class="container album text-muted">
+	   		<h3>All Albums </h3><hr>
+       		<div class="row">
+				<div class="col-md-12" ng-repeat="tr in albdt">
+		          <h6 class="lead">{{tr.name}} </h6>
+		           <a ng-href="{{tr.url}}"><img ng-src="{{ tr.image[2]['#text']}}" alt="{{ tr.image[2]['#text']}}"> </a> 
+		           <p class="card-text">Artist Name: {{tr.artist}} <br><br>
+		            </p>
+		         </div> 				
+
+        	</div>    
+    	</div>
+	</div>   
+
+	<div class="col-md-4">
+	   <div class="container album text-muted">
+	   		<h3>All Tracks </h3><hr>
+       		<div class="row">
+				<div class="col-md-12" ng-repeat="tr in tradt">
+		          <h6 class="lead">{{tr.name}} </h6>
+		           <a ng-href="{{tr.url}}"><img ng-src="{{ tr.image[2]['#text']}}" alt="{{ tr.image[2]['#text']}}"> </a> 
+		           <p class="card-text">Artist Name: {{tr.artist}} <br>
+		            Listeners: {{tr.listeners}} <br><br>
+		            </p>
+		         </div>
+		      </div>				
+
+        	</div>    
+    	</div>
+
+	<div class="col-md-4">
+	   <div class="container album text-muted">
+	   		<h3>All Artists </h3><hr>
+       		<div class="row">
+				<div class="col-md-12" ng-repeat="tr in artdt">
+		          <h6 class="lead">{{tr.name}} </h6>
+		           <a ng-href="{{tr.url}}"><img ng-src="{{ tr.image[2]['#text']}}" alt="{{ tr.image[2]['#text']}}"> </a> 
+		           <p class="card-text">Listeners: {{tr.listeners}} <br><br>
+		            </p>
+		         </div>				
+
+        	</div>    
+    	</div>
+	</div> 
+
+
+	</div>
+</div>
+
+
+
+

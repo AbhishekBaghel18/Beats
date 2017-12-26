@@ -1,0 +1,54 @@
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-md-9">
+        <div class="col-md-12">
+          <h2 class="text-center display-4">{{artinfo.name}}</h2>
+        </div>
+        <div class="container album text-muted">
+            <div class="row">
+                <div class="col-md-6">
+                  <img ng-src="{{artinfo.image[3]['#text']}}" class="img-fluid img-thumbnail">   <p><b>Listeners</b>: {{artinfo.stats.listeners}}<br>
+                     <b>Playcount</b>:{{artinfo.stats.playcount}}</p><hr>
+                     <h5><b>Top Tracks by {{artinfo.name}}</b></h5><br>
+                     <div class="row">
+                        <div class="col-md-5" ng-repeat="top in arttrack">
+                           <h5><a ng-href="{{top.url}}"><b>{{top.name}}</b> </a></h5> 
+                           <p class="card-text">Playcount: {{top.playcount}} <br>
+                            Listeners: {{top.listeners}}<br>
+                           </p>
+                        </div>
+                     </div>       
+                    </div>
+                 <div class="col-md-6">
+                    <p class="card-text text-justify">{{artinfo.bio.content}} <br> </p><hr>
+                    <h5><b>Top Albums by {{artinfo.name}}</b></h5><br>
+                     <div class="row">
+                        <div class="col-md-5" ng-repeat="top in artalbum">
+                           <p><b>{{top.name}}</b> </p>
+                           <a ng-href="{{top.url}}"><img ng-src="{{ top.image[2]['#text']}}" alt="{{ top.image[2]['#text']}}" class="img-fluid"> </a> 
+                           <p class="card-text">Playcount: {{top.playcount}} <br><br>
+                           </p>
+                        </div>
+                     </div>
+
+                   </div>         
+            </div>    
+        </div>
+      </div>   
+      <div class="col-md-3">
+        <div class="container album text-muted">
+          <h3>Similar Artists </h3><hr>
+          <div class="row">
+              <div class="col-md-12" ng-repeat="tr in artinfo.similar.artist">
+                  <h6 class="lead">{{tr.name}} </h6>
+                  <a ng-href="/Beats/#/artistinfo/{{tr.name}}"><img ng-src="{{ tr.image[2]['#text']}}" alt="{{ tr.image[2]['#text']}}" class="img-fluid"> </a> <br>
+             </div>       
+          </div>    
+       </div>
+      </div> 
+  </div>
+</div>
+
+
+
+
